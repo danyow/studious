@@ -1,4 +1,4 @@
-name: 构建🍳 → 发布🍻
+name: 构建发布🍳
 on:
   workflow_dispatch:
     inputs:
