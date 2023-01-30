@@ -43,6 +43,8 @@ jobs:
           ### 以下按需注释或打开
           # 个人免费版
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           # 订阅版
           # UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           # UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
