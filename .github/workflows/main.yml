@@ -49,7 +49,7 @@ jobs:
           # UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           target_platform: ${{ matrix.target_platform }}
-          projectPath: pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }}
+          buildsPath: pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }}
       - name: 查看构建后的内容
         run: |
           ls
