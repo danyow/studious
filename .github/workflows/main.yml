@@ -19,7 +19,6 @@ jobs:
       fail-fast: false
       matrix:
         target_platform:
-          # - Android
           - WebGL
     outputs:
       target_platform: ${{ matrix.target_platform }}
@@ -40,28 +39,26 @@ jobs:
       - name: 构建Unity工程
         uses: game-ci/unity-builder@main
         env:
-          ### 以下按需注释或打开
-          # 个人免费版
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-          # 订阅版
-          # UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          # UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-          # UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
-          target_platform: ${{ matrix.target_platform }}
-          buildsPath: pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }}
+          targetPlatform: ${{ matrix.target_platform }}
       - name: 查看构建后的内容
         run: |
-          ls
-          tree
+          tree build
+      - name: 移动构建后文件
+        run: |
+          mkdir pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }} -p
+          cp -rf build/{{ matrix.target_platform }}/*  pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }}
+      - name: 查看移动后的内容
+        run: |
+          tree pages
       - name: 切换分支
         run: |
           git checkout -f gh-pages
       - name: 查看切换后的内容
-        run: |
-          ls
+        run: | 
           tree
       - name: 部署到GitHubPages
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -69,35 +66,3 @@ jobs:
           branch: gh-pages
           file_pattern: pages/**
           commit_message: 部署到GitHubPages
-          
-  
-  # releaseToSite:
-  #   name: 同时发布到个人站点🍻
-  #   runs-on: ubuntu-latest
-  #   needs: buildWithLinux
-  #   steps:
-  #     - name: 获取代码存储库
-  #       uses: actions/checkout@v2
-  #       with:
-  #         repository: danyow/danyow
-  #         token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN_FULL }}
-  #         ref: gh-pages
-  #     - name: 下载WebGL构建包
-  #       uses: actions/download-artifact@v2
-  #       with:
-  #         name: ${{ github.event.repository.name }}-WebGL
-  #         path: tmp
-  #     - name: 移动并覆盖所有下载文件
-  #       run: |
-  #         mkdir ${{ github.event.repository.name }} -p
-  #         cp -rf tmp/WebGL/*  ${{ github.event.repository.name }}
-  #     - name: 查看下载后的内容
-  #       run: |
-  #         ls
-  #         tree
-  #     - name: 发布到个人站点
-  #       uses: stefanzweifel/git-auto-commit-action@v4
-  #       with:
-  #         branch: gh-pages
-  #         file_pattern: ${{ github.event.repository.name }}/**
-  #         commit_message: ${{ github.event.repository.name }}发布到个人站点  
