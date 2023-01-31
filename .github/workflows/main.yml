@@ -30,7 +30,7 @@ jobs:
           fetch-depth: 0
           lfs: true
       - name: 缓存Unity库文件夹
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: Library
           key: Library-build-${{ matrix.target_platform }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
@@ -53,6 +53,13 @@ jobs:
           target_platform: ${{ matrix.target_platform }}
           buildsPath: pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }}
       - name: 查看构建后的内容
+        run: |
+          ls
+          tree
+      - name: 切换分支
+        run: |
+          git checkout gh-pages
+      - name: 查看切换后的内容
         run: |
           ls
           tree
