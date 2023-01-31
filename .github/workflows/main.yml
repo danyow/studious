@@ -50,7 +50,7 @@ jobs:
       - name: 移动构建后文件
         run: |
           mkdir pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }} -p
-          cp -rf build/{{ matrix.target_platform }}/*  pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }}
+          cp -rf build/${{ matrix.target_platform }}/${{ matrix.target_platform }}/*  pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }}
       - name: 查看移动后的内容
         run: |
           tree pages
