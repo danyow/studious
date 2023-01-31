@@ -58,7 +58,7 @@ jobs:
           tree
       - name: 切换分支
         run: |
-          git checkout gh-pages
+          git checkout -f gh-pages
       - name: 查看切换后的内容
         run: |
           ls
