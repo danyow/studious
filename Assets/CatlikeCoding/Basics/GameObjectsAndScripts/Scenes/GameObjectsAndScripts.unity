@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 96896805}
   - component: {fileID: 96896804}
   - component: {fileID: 96896803}
-  - component: {fileID: 96896802}
   m_Layer: 0
   m_Name: Face
   m_TagString: Untagged
@@ -142,29 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &96896802
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96896801}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &96896803
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -241,7 +217,6 @@ GameObject:
   - component: {fileID: 253460890}
   - component: {fileID: 253460893}
   - component: {fileID: 253460892}
-  - component: {fileID: 253460891}
   m_Layer: 0
   m_Name: Hour Indicator 9
   m_TagString: Untagged
@@ -264,27 +239,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!65 &253460891
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253460889}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &253460892
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -483,7 +437,6 @@ GameObject:
   - component: {fileID: 397407707}
   - component: {fileID: 397407710}
   - component: {fileID: 397407709}
-  - component: {fileID: 397407708}
   m_Layer: 0
   m_Name: Hour Indicator 4
   m_TagString: Untagged
@@ -506,27 +459,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &397407708
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397407706}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &397407709
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -588,7 +520,6 @@ GameObject:
   - component: {fileID: 432985296}
   - component: {fileID: 432985299}
   - component: {fileID: 432985298}
-  - component: {fileID: 432985297}
   m_Layer: 0
   m_Name: Hour Indicator 3
   m_TagString: Untagged
@@ -611,27 +542,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!65 &432985297
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 432985295}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &432985298
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -817,7 +727,6 @@ GameObject:
   - component: {fileID: 475734604}
   - component: {fileID: 475734607}
   - component: {fileID: 475734606}
-  - component: {fileID: 475734605}
   m_Layer: 0
   m_Name: Hours Arm
   m_TagString: Untagged
@@ -840,27 +749,6 @@ Transform:
   m_Father: {fileID: 443452670}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &475734605
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475734603}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &475734606
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -922,7 +810,6 @@ GameObject:
   - component: {fileID: 500011095}
   - component: {fileID: 500011098}
   - component: {fileID: 500011097}
-  - component: {fileID: 500011096}
   m_Layer: 0
   m_Name: Hour Indicator 2
   m_TagString: Untagged
@@ -945,27 +832,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &500011096
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500011094}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &500011097
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1059,7 +925,6 @@ GameObject:
   - component: {fileID: 611410396}
   - component: {fileID: 611410399}
   - component: {fileID: 611410398}
-  - component: {fileID: 611410397}
   m_Layer: 0
   m_Name: Hour Indicator 1
   m_TagString: Untagged
@@ -1082,27 +947,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &611410397
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611410395}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &611410398
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1164,7 +1008,6 @@ GameObject:
   - component: {fileID: 642155648}
   - component: {fileID: 642155651}
   - component: {fileID: 642155650}
-  - component: {fileID: 642155649}
   m_Layer: 0
   m_Name: Hour Indicator 7
   m_TagString: Untagged
@@ -1187,27 +1030,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &642155649
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642155647}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &642155650
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1269,7 +1091,6 @@ GameObject:
   - component: {fileID: 947855694}
   - component: {fileID: 947855697}
   - component: {fileID: 947855696}
-  - component: {fileID: 947855695}
   m_Layer: 0
   m_Name: Hour Indicator 5
   m_TagString: Untagged
@@ -1292,27 +1113,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &947855695
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947855693}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &947855696
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1374,7 +1174,6 @@ GameObject:
   - component: {fileID: 1006309576}
   - component: {fileID: 1006309575}
   - component: {fileID: 1006309574}
-  - component: {fileID: 1006309573}
   m_Layer: 0
   m_Name: Hour Indicator 12
   m_TagString: Untagged
@@ -1382,27 +1181,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1006309573
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006309572}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1006309574
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1479,7 +1257,6 @@ GameObject:
   - component: {fileID: 1147736524}
   - component: {fileID: 1147736527}
   - component: {fileID: 1147736526}
-  - component: {fileID: 1147736525}
   m_Layer: 0
   m_Name: Seconds Arm
   m_TagString: Untagged
@@ -1502,27 +1279,6 @@ Transform:
   m_Father: {fileID: 556251531}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1147736525
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147736523}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1147736526
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1543,7 +1299,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 56c8c5808cbf14c4891984754740684f, type: 2}
+  - {fileID: 2100000, guid: 8c7c691404b891744b6df85c0546fb55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1584,7 +1340,6 @@ GameObject:
   - component: {fileID: 1229015349}
   - component: {fileID: 1229015352}
   - component: {fileID: 1229015351}
-  - component: {fileID: 1229015350}
   m_Layer: 0
   m_Name: Hour Indicator 6
   m_TagString: Untagged
@@ -1607,27 +1362,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1229015350
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229015348}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1229015351
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1689,7 +1423,6 @@ GameObject:
   - component: {fileID: 1280336296}
   - component: {fileID: 1280336299}
   - component: {fileID: 1280336298}
-  - component: {fileID: 1280336297}
   m_Layer: 0
   m_Name: Hour Indicator 10
   m_TagString: Untagged
@@ -1712,27 +1445,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1280336297
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280336295}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1280336298
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1794,7 +1506,6 @@ GameObject:
   - component: {fileID: 1320133705}
   - component: {fileID: 1320133708}
   - component: {fileID: 1320133707}
-  - component: {fileID: 1320133706}
   m_Layer: 0
   m_Name: Hour Indicator 8
   m_TagString: Untagged
@@ -1817,27 +1528,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1320133706
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320133704}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1320133707
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1899,7 +1589,6 @@ GameObject:
   - component: {fileID: 1452746471}
   - component: {fileID: 1452746474}
   - component: {fileID: 1452746473}
-  - component: {fileID: 1452746472}
   m_Layer: 0
   m_Name: Minutes Arm
   m_TagString: Untagged
@@ -1922,27 +1611,6 @@ Transform:
   m_Father: {fileID: 1984793214}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1452746472
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1452746470}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1452746473
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2004,7 +1672,6 @@ GameObject:
   - component: {fileID: 1579643183}
   - component: {fileID: 1579643186}
   - component: {fileID: 1579643185}
-  - component: {fileID: 1579643184}
   m_Layer: 0
   m_Name: Hour Indicator 11
   m_TagString: Untagged
@@ -2027,27 +1694,6 @@ Transform:
   m_Father: {fileID: 371879764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1579643184
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579643182}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1579643185
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2107,6 +1753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1866754170}
+  - component: {fileID: 1866754171}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -2134,6 +1781,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1866754171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866754169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc3b12cbf5676f4cac2109fc5a8accd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoursPivot: {fileID: 443452670}
+  minutesPivot: {fileID: 1984793214}
+  secondsPivot: {fileID: 556251531}
 --- !u!1 &1984793213
 GameObject:
   m_ObjectHideFlags: 0
