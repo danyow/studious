@@ -58,10 +58,10 @@ jobs:
           tree
       - name: 追加内容到README
         run: |
-          echo "- [${{ github.event.inputs.build_path }}](./pages/${{ github.event.inputs.build_path }})\n" > README.md
+          echo "- [${{ github.event.inputs.build_path }}](./pages/${{ github.event.inputs.build_path }})\n" >> README.md
           cat README.md
           build_path=${{ github.event.inputs.build_path }} 
-          echo "${ build_path//\//.} = "https://danyow.cn/${{ github.event.repository.name }}/pages/${{ github.event.inputs.build_path }}" > pages.toml
+          echo "${ build_path//\//.} = "https://danyow.cn/${{ github.event.repository.name }}/pages/${{ github.event.inputs.build_path }}" >> pages.toml
           cat pages.toml
       - name: 部署到GitHubPages
         uses: stefanzweifel/git-auto-commit-action@v4
