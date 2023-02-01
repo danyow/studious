@@ -5,7 +5,7 @@ on:
       build_path:
         description: "构建后路径："
         required: true
-        default: "" 
+        default: "catlikecoding/basics/tmp" 
 
 jobs:
   buildWithLinux:
