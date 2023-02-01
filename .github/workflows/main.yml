@@ -2,14 +2,10 @@ name: 构建发布🍳
 on:
   workflow_dispatch:
     inputs:
-      project:
-        description: "项目名："
+      build_path:
+        description: "构建后路径："
         required: true
         default: "" 
-      unit:
-        description: "单元："
-        required: true
-        default: ""
 
 jobs:
   buildWithLinux:
@@ -36,30 +32,37 @@ jobs:
           restore-keys: |
             Library-build-${{ matrix.target_platform }}-
             Library-build-
-      - name: 构建Unity工程
-        uses: game-ci/unity-builder@main
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-        with:
-          targetPlatform: ${{ matrix.target_platform }}
-      - name: 查看构建后的内容
-        run: |
-          tree build
-      - name: 移动构建后文件
-        run: |
-          mkdir pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }} -p
-          cp -rf build/${{ matrix.target_platform }}/${{ matrix.target_platform }}/*  pages/${{ github.event.inputs.project }}/${{ github.event.inputs.unit }}
-      - name: 查看移动后的内容
-        run: |
-          tree pages
+#      - name: 构建Unity工程
+#        uses: game-ci/unity-builder@main
+#        env:
+#          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+#          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+#          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+#        with:
+#          targetPlatform: ${{ matrix.target_platform }}
+#      - name: 查看构建后的内容
+#        run: |
+#          tree build
+#      - name: 移动构建后文件
+#        run: |
+#          mkdir pages/${{ github.event.inputs.build_path }} -p
+#          cp -rf build/${{ matrix.target_platform }}/${{ matrix.target_platform }}/*  pages/${{ github.event.inputs.build_path }}
+#      - name: 查看移动后的内容
+#        run: |
+#          tree pages
       - name: 切换分支
         run: |
           git checkout -f gh-pages
       - name: 查看切换后的内容
         run: | 
           tree
+      - name: 追加内容到README
+        run: |
+          echo "- [${{ github.event.inputs.build_path }}](./pages/${{ github.event.inputs.build_path }})\n" > README.md
+          cat README.md
+          build_path=${{ github.event.inputs.build_path }} 
+          echo "${ build_path//\//.} = "https://danyow.cn/${{ github.event.repository.name }}/pages/${{ github.event.inputs.build_path }}" > pages.toml
+          cat pages.toml
       - name: 部署到GitHubPages
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
