@@ -6,6 +6,11 @@ on:
         description: "构建后路径："
         required: true
         default: "catlikecoding/basics/tmp" 
+      update_profile:
+        description: "是否更新文件："
+        required: true
+        default: "true"
+        type: boolean
 
 jobs:
   buildWithLinux:
@@ -45,8 +50,8 @@ jobs:
           tree build
       - name: 移动构建后文件
         run: |
-          mkdir pages/${{ github.event.inputs.build_path }} -p
-          cp -rf build/${{ matrix.target_platform }}/${{ matrix.target_platform }}/*  pages/${{ github.event.inputs.build_path }}
+          mkdir pages/${{ inputs.build_path }} -p
+          cp -rf build/${{ matrix.target_platform }}/${{ matrix.target_platform }}/*  pages/${{ inputs.build_path }}
       - name: 查看移动后的内容
         run: |
           tree pages
@@ -57,11 +62,12 @@ jobs:
         run: | 
           tree
       - name: 追加内容到README
+        if: ${{ inputs.update_profile }}
         run: |
-          echo -e "- [${{ github.event.inputs.build_path }}](./pages/${{ github.event.inputs.build_path }})\n" >> README.md
+          echo -e "- [${{ inputs.build_path }}](./pages/${{ inputs.build_path }})\n" >> README.md
           cat README.md
-          tmp=${{ github.event.inputs.build_path }}
-          echo -e "${tmp//\//.} = https://danyow.cn/${{ github.event.repository.name }}/pages/${{ github.event.inputs.build_path }}\n" >> pages.toml
+          tmp=${{ inputs.build_path }}
+          echo -e "${tmp//\//.} = https://danyow.cn/${{ repository.name }}/pages/${{ inputs.build_path }}\n" >> pages.toml
           cat pages.toml
       - name: 部署到GitHubPages
         uses: stefanzweifel/git-auto-commit-action@v4
