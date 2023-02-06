@@ -48,6 +48,9 @@ jobs:
       - name: 查看构建后的内容
         run: |
           tree build
+      - name: 切换分支
+        run: |
+          git checkout -f gh-pages
       - name: 移动构建后文件
         run: |
           mkdir pages/${{ inputs.build_path }} -p
@@ -55,12 +58,6 @@ jobs:
       - name: 查看移动后的内容
         run: |
           tree pages
-      - name: 切换分支
-        run: |
-          git checkout -f gh-pages
-      - name: 查看切换后的内容
-        run: | 
-          tree
       - name: 追加内容到README
         if: ${{ inputs.update_profile }}
         run: |
